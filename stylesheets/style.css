@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* transition: all .2s linear; */
+    transition: all .2s linear;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
 }
@@ -13,7 +13,7 @@
     --white: #ffffff;
     --light-gray: #d9d9d9;
     --dark-gradient: linear-gradient(90deg, rgba(69, 16, 138, 1) 2%, rgba(61, 6, 95, 1) 29%, rgba(32, 5, 84, 1) 100%);
-    --light-gradient: linear-gradient(90deg, rgba(19,139,189,1) 4%, rgba(22,154,198,1) 23%, rgba(30,194,223,1) 59%, rgba(42,246,255,1) 100%);
+    --light-gradient: linear-gradient(90deg, rgba(19, 139, 189, 1) 4%, rgba(22, 154, 198, 1) 23%, rgba(30, 194, 223, 1) 59%, rgba(42, 246, 255, 1) 100%);
 }
 
 .btn {
@@ -39,6 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 4rem;
     height: 100vh;
     margin: 0 auto;
     padding: 0 100px;
@@ -63,10 +64,13 @@
     font-size: 78px;
 }
 
+.intro .content .description {
+    line-height: 30px;
+}
+
 .intro .content .btn {
     margin-top: 40px;
 }
-
 
 /* ========================= courses ========================= */
 .courses .courses-btns-container {
@@ -92,4 +96,296 @@
     font-size: 20px;
     font-weight: 600;
     color: var(--light-gray);
+}
+
+
+/* ========================= contacts ========================= */
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    background: var(--dark-gradient);
+    padding: 140px 180px;
+}
+
+.contacts .content .heading {
+    color: var(--white);
+    font-size: 50px;
+}
+
+.contacts .content .info {
+    margin: 49px 0;
+}
+
+.contacts .content .info a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.contacts .content .map {
+    height: 167px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.contacts .images {
+    position: relative;
+    width: 850px;
+}
+
+.contacts .images img {
+    position: absolute;
+}
+
+.contacts .images .img1 {
+    top: 0;
+    left: 0;
+}
+
+.contacts .images .img2 {
+    top: 0;
+    left: 434px;
+}
+
+.contacts .images .img3 {
+    top: 219px;
+    left: 0;
+}
+
+.contacts .images .img4 {
+    top: 279px;
+    left: 434px;
+}
+
+
+/* ========================= media ========================= */
+@media (max-width: 1650px) {
+    .contacts {
+        padding: 140px 100px;
+    }
+}
+
+@media (max-width: 1536px) {
+    .intro .image img {
+        width: 650px;
+        height: 658px;
+    }
+
+    .courses .courses-btns-container .btn {
+        font-size: 25px;
+        height: 150px;
+    }
+
+    .courses .courses-btns-container .btn span.btn_description {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .contacts {
+        padding: 140px 50px;
+    }
+}
+
+@media (max-width: 1370px) {
+    .contacts .content .heading {
+        font-size: 40px;
+    }
+
+    .contacts .content .info a {
+        font-size: 15px;
+    }
+
+    .contacts .content .map iframe {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1236px) {
+    .intro .content .heading {
+        padding: 20px 0;
+        font-size: 60px;
+    }
+
+    .intro .image img {
+        width: 450px;
+        height: 458px;
+    }
+
+    .intro .content .btn {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .contacts {
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .contacts .images {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 414px;
+    }
+
+    .contacts .images img {
+        position: static;
+    }
+}
+
+@media (max-width: 1200px) {
+    .courses .courses-btns-container {
+        margin: 80px 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .intro {
+        gap: 1rem;
+    }
+
+    .intro .content .description {
+        font-size: 15px;
+    }
+
+    .courses .courses-btns-container .btn {
+        font-size: 20px;
+        height: 130px;
+    }
+
+    .courses .courses-btns-container .btn span.btn_description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .intro {
+        justify-content: center;
+    }
+
+    .intro .content {
+        text-align: center;
+    }
+
+    .intro .content .location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro .image {
+        display: none;
+    }
+
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 80px 40px;
+    }
+
+    .contacts .content {
+        text-align: center;
+    }
+
+    .contacts .content .info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+
+    .contacts .content .info a {
+        margin: 15px 0;
+    }
+
+    .contacts .content .map iframe {
+        width: 414px;
+    }
+}
+
+@media (max-width: 800px) {
+    .courses .courses-btns-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .courses .courses-btns-container .btn:nth-child(2),
+    .courses .courses-btns-container .btn:nth-child(4) {
+        background: var(--dark-gradient);
+    }
+
+    .courses .courses-btns-container .btn:nth-child(3) {
+        background: var(--light-gradient);
+    }
+
+    .courses .courses-btns-container .btn span.btn_description {
+        color: var(--white);
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 450px) {
+    .intro .content {
+        margin-top: -130px;
+    }
+
+    .contacts {
+        padding: 80px 10px;
+    }
+
+    .contacts .content .map iframe {
+        width: 360px;
+    }
+
+    .contacts .images {
+        width: 100%;
+    }
+
+    .contacts .images img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .contacts .content .map iframe {
+        width: 320px;
+    }
+}
+
+@media (max-width: 340px) {
+    .intro {
+        padding: 0 20px;
+    }
+
+    .intro .content .location {
+        font-size: 12px;
+    }
+
+    .intro .content .location img {
+        width: 18px;
+        height: 22px;
+    }
+
+    .intro .content .heading {
+        font-size: 40px;
+    }
+
+    .intro .content .description {
+        font-size: 12px;
+    }
+
+    .intro .content .btn {
+        padding: 13px;
+        font-size: 13px;
+    }
+
+    .contacts .content .map iframe {
+        width: 280px;
+    }
 }
