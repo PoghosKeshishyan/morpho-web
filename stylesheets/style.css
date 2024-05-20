@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: all .2s linear; */
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --white: #ffffff;
+    --light-gray: #d9d9d9;
+    --dark-gradient: linear-gradient(90deg, rgba(69, 16, 138, 1) 2%, rgba(61, 6, 95, 1) 29%, rgba(32, 5, 84, 1) 100%);
+    --light-gradient: linear-gradient(90deg, rgba(19,139,189,1) 4%, rgba(22,154,198,1) 23%, rgba(30,194,223,1) 59%, rgba(42,246,255,1) 100%);
+}
+
+.btn {
+    display: block;
+    padding: 28px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+    border-radius: 20px;
+}
+
+.btn.light {
+    background: var(--light-gradient);
+}
+
+.btn.dark {
+    background: var(--dark-gradient);
+}
+
+/* ========================= intro ========================= */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 100px;
+    color: var(--white);
+    background: var(--dark-gradient);
+}
+
+.intro .content .location {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 600;
+}
+
+.intro .content .location img {
+    width: 24px;
+    height: 31px;
+}
+
+.intro .content .heading {
+    padding: 20px 0;
+    font-size: 78px;
+}
+
+.intro .content .btn {
+    margin-top: 40px;
+}
+
+
+/* ========================= courses ========================= */
+.courses .courses-btns-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    row-gap: 35px;
+    margin: 80px;
+}
+
+.courses .courses-btns-container .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 185px;
+    font-size: 32px;
+}
+
+.courses .courses-btns-container .btn span.btn_description {
+    display: block;
+    margin-top: 11px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--light-gray);
+}
