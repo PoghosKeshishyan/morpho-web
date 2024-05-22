@@ -3,15 +3,21 @@
 * {
     margin: 0;
     padding: 0;
+    outline: none;
     box-sizing: border-box;
-    transition: all .2s linear;
     text-decoration: none;
+    transition: all .2s linear;
     font-family: "Montserrat", sans-serif;
 }
 
 :root {
     --white: #ffffff;
     --light-gray: #d9d9d9;
+    --blue: #1a73e8;
+    --blue-alpha: #0f2c76cc;
+    --dark-gray: #333333;
+    --gray: #555555;
+    --red: #ff0000;
     --dark-gradient: linear-gradient(90deg, rgba(69, 16, 138, 1) 2%, rgba(61, 6, 95, 1) 29%, rgba(32, 5, 84, 1) 100%);
     --light-gradient: linear-gradient(90deg, rgba(19, 139, 189, 1) 4%, rgba(22, 154, 198, 1) 23%, rgba(30, 194, 223, 1) 59%, rgba(42, 246, 255, 1) 100%);
 }
@@ -72,6 +78,218 @@
     margin-top: 40px;
 }
 
+
+/* ========================= Modal SignUp ========================= */
+.modalSignUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modalSignUp.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalSignUp .bg {
+    position: absolute;
+    background: var(--blue-alpha);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.modalSignUp form {
+    position: relative;
+    background: var(--white);
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modalSignUp form h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.modalSignUp form h2 span {
+    cursor: pointer;
+    font-size: 36px;
+    color: var(--dark-gray);
+    transition: color 0.3s ease;
+}
+
+.modalSignUp form h2 span:hover,
+.modalSignUp form h2 span:active {
+    color: var(--red);
+}
+
+.modalSignUp form .inputBox {
+    margin-bottom: 20px;
+}
+
+.modalSignUp form .inputBox p {
+    margin-bottom: 10px;
+    color: var(--dark-gray);
+}
+
+.modalSignUp form .inputBox input,
+.modalSignUp form .inputBox select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.modalSignUp form .inputBox input:focus,
+.modalSignUp form .inputBox select:focus {
+    border-color: var(--blue);
+}
+
+.modalSignUp form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background: var(--light-gradient);
+    color: var(--white);
+    border: none;
+    border-radius: 500px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modalSignUp form input[type="submit"]:hover {
+    background: var(--dark-gradient);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================= Modal SignUp ========================= */
+.modalCourses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modalCourses.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalCourses .bg {
+    position: absolute;
+    background: var(--blue-alpha);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.modalCourses .modal_content {
+    position: relative;
+    background: var(--white);
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modalCourses .modal_content .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.modalCourses .modal_content .head span {
+    cursor: pointer;
+    font-size: 36px;
+    color: var(--dark-gray);
+    transition: color 0.3s ease;
+}
+
+.modalCourses .modal_content .head span:hover,
+.modalCourses .modal_content .head span:active {
+    color: var(--red);
+}
+
+.modalCourses .modal_content .modal_text {
+    margin: 20px 0;
+}
+
+.modalCourses .modal_content .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background: var(--light-gradient);
+    color: var(--white);
+    border: none;
+    border-radius: 500px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modalCourses .modal_content .btn:hover {
+    background: var(--dark-gradient);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* ========================= courses ========================= */
 .courses .courses-btns-container {
     display: grid;
@@ -85,17 +303,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     height: 185px;
     font-size: 32px;
-}
-
-.courses .courses-btns-container .btn span.btn_description {
-    display: block;
-    margin-top: 11px;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--light-gray);
 }
 
 
@@ -103,8 +312,9 @@
 .contacts {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    padding: 133px 150px;
     background: var(--dark-gradient);
-    padding: 140px 180px;
 }
 
 .contacts .content .heading {
@@ -113,7 +323,7 @@
 }
 
 .contacts .content .info {
-    margin: 49px 0;
+    margin: 48px 0;
 }
 
 .contacts .content .info a {
@@ -126,42 +336,38 @@
 }
 
 .contacts .content .map {
+    width: 417px;
     height: 167px;
     overflow: hidden;
     border-radius: 20px;
 }
 
+.contacts .content .map iframe {
+    width: 100%;
+}
+
 .contacts .images {
-    position: relative;
-    width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 870px;
 }
 
-.contacts .images img {
-    position: absolute;
+.contacts .images .column {
+    flex: 50%;
 }
 
-.contacts .images .img1 {
-    top: 0;
-    left: 0;
+.contacts .images .column img {
+    vertical-align: middle;
+    margin-bottom: 16px;
+    padding: 0 10px;
 }
 
-.contacts .images .img2 {
-    top: 0;
-    left: 434px;
-}
-
-.contacts .images .img3 {
-    top: 219px;
-    left: 0;
-}
-
-.contacts .images .img4 {
-    top: 279px;
-    left: 434px;
+.contacts .images .column:nth-child(2) img {
+    margin-bottom: 20px;
 }
 
 
-/* ========================= media ========================= */
+/* ========================= Responsive Styles ========================= */
 @media (max-width: 1650px) {
     .contacts {
         padding: 140px 100px;
@@ -184,23 +390,38 @@
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1520px) {
     .contacts {
         padding: 140px 50px;
     }
 }
 
-@media (max-width: 1370px) {
-    .contacts .content .heading {
-        font-size: 40px;
+@media (max-width: 1410px) {
+    .contacts {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+        padding: 50px;
+    }
+
+    .contacts .content h2 {
+        text-align: center;
     }
 
     .contacts .content .info a {
-        font-size: 15px;
+        justify-content: center;
     }
 
-    .contacts .content .map iframe {
-        width: 350px;
+    .contacts .images {
+        width: 80%;
+    }
+
+    .contacts .images img {
+        width: 100%;
+    }
+
+    .contacts .images .column:nth-child(2) img {
+        margin-bottom: 21px;
     }
 }
 
@@ -219,23 +440,9 @@
         padding: 20px;
         font-size: 16px;
     }
-}
-
-@media (max-width: 1320px) {
-    .contacts {
-        justify-content: center;
-        gap: 5rem;
-    }
 
     .contacts .images {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 414px;
-    }
-
-    .contacts .images img {
-        position: static;
+        width: 100%;
     }
 }
 
@@ -283,30 +490,8 @@
         display: none;
     }
 
-    .contacts {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 80px 40px;
-    }
-
-    .contacts .content {
-        text-align: center;
-    }
-
-    .contacts .content .info {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: 30px 0;
-    }
-
-    .contacts .content .info a {
-        margin: 15px 0;
-    }
-
-    .contacts .content .map iframe {
-        width: 414px;
+    .contacts .content .heading {
+        font-size: 40px;
     }
 }
 
@@ -328,6 +513,33 @@
         color: var(--white);
         font-size: 13px;
     }
+
+    .contacts {
+        padding: 50px 10px;
+    }
+
+    .contacts .images {
+        flex-direction: column;
+    }
+
+    .contacts .images .column:first-child {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modalSignUp form {
+        margin-top: -120px;
+        padding: 15px;
+    }
+
+    .modalSignUp form h2 {
+        font-size: 24px;
+    }
+
+    .modalCourses .modal_content {
+        margin-top: -20px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -335,25 +547,21 @@
         margin-top: -130px;
     }
 
-    .contacts {
-        padding: 80px 10px;
+    .contacts .content .heading {
+        font-size: 35px;
     }
 
-    .contacts .content .map iframe {
-        width: 360px;
+    .contacts .content .info a {
+        margin: 20px;
     }
 
-    .contacts .images {
-        width: 100%;
-    }
-
-    .contacts .images img {
-        width: 100%;
+    .contacts .content .map {
+        width: 350px;
     }
 }
 
 @media (max-width: 380px) {
-    .contacts .content .map iframe {
+    .contacts .content .map {
         width: 320px;
     }
 }
@@ -385,7 +593,7 @@
         font-size: 13px;
     }
 
-    .contacts .content .map iframe {
+    .contacts .content .map {
         width: 280px;
     }
 }

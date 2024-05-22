@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="scripts/script.js" type="module" defer></script>
     <title>Morpho</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
 
                 <h1 class="heading">COURSES</h1>
                 <p class="description">Courses in programming and web development</p>
-                <a href="#" class="btn light">SIGN UP FOR A CLASS</a>
+                <a href="#" class="btn light" id="signUpBtn">SIGN UP FOR A CLASS</a>
             </div>
 
             <div class="image">
@@ -26,25 +27,64 @@
             </div>
         </section>
 
+        <!-- modal for sign up for a class -->
+        <div class="modalSignUp" id="modalSignUp">
+            <div class="bg"></div>
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <h2>
+                    Sign up for a class
+                    <span id="closeSignUpModal">&times;</span>
+                </h2>
+
+                <input type="hidden" name="access_key" value="ff5999d6-102b-4571-9e08-406ade290fa8">
+
+                <div class="inputBox">
+                    <p>Your first and last name</p>
+                    <input type="text" name="name" required autocomplete="off">
+                </div>
+                
+                <div class="inputBox">
+                    <p>Your phone number</p>
+                    <input type="tel" name="tel" required autocomplete="off">
+                </div>
+
+                <div class="inputBox">
+                    <p>Select the course</p>
+                    <select name="courses" id="" required>
+                        <option value="" disabled selected>Courses</option>
+                        <option value="Robotics">Robotics</option>
+                        <option value="Web programming">Web programming</option>
+                        <option value="C# .net courses">C# .net courses</option>
+                        <option value="C++ courses">C++ courses</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="Sign up">
+            </form>
+        </div>
+
+        <!-- modal for courses button -->
+        <div class="modalCourses" id="modalCourses">
+            <div class="bg"></div>
+
+            <div class="modal_content">
+                <div class="head">
+                    <p id="modalCoursesTitle"></p>
+                    <span class="closeModalCoursesBtn">&times;</span>
+                </div>
+
+                <p class="modal_text" id="modalCoursesText"></p>
+                <a href="#" class="btn modalCoursesBtn">Sign up for a class</a>
+            </div>
+        </div>
+
         <section class="courses">
             <div class="courses-btns-container">
-                <a href="#" class="btn light">
-                    <span>WEB PROGRAMMING</span>
-                </a>
-
-                <a href="#" class="btn dark">
-                    <span>FRONTEND COURSES</span>
-                    <span class="btn_description">HTML, CSS, JAVASCRIPT, REACT.JS</span>
-                </a>
-
-                <a href="#" class="btn dark">
-                    <span>BACKEND</span>
-                    <span class="btn_description">PYTHON, JANGO, PHP LARAVEL, NODE.JS</span>
-                </a>
-
-                <a href="#" class="btn light">
-                    <span>C# .NET COURSES <br> C++ COURSES</span>
-                </a>
+                <a href="#" data-course="robotics" class="btn light">ROBOTICS</a>
+                <a href="#" data-course="web" class="btn dark">WEB PROGRAMMING</a>
+                <a href="#" data-course="csharp" class="btn dark">C# .NET COURSES</a>
+                <a href="#" data-course="cpp" class="btn light">C++ COURSES</a>
             </div>
         </section>
 
@@ -72,21 +112,25 @@
                 <div class="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.108284139094!2d44.51913787661577!3d40.20665417147427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd347d7b3149%3A0xa6e1adc76b1bcc69!2zNTkg1L_VuNW01avVv9Wh1b3VqyDVutW41bLVuNW_1aEsINS11oDWh9Wh1bYgMDAxNA!5e0!3m2!1shy!2sam!4v1716070291250!5m2!1shy!2sam"
-                        width="413" height="167" style="border:0;" allowfullscreen="" loading="lazy"
+                        height="167" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
 
-            <div class="images">
-                <img src="images/Rectangle 1.png" class="img1" alt="Rectangle">
-                <img src="images/Rectangle 2.png" class="img2" alt="Rectangle">
-                <img src="images/Rectangle 3.png" class="img3" alt="Rectangle">
-                <img src="images/Rectangle 4.png" class="img4" alt="Rectangle">
+            <div class="images"> 
+                <div class="column">
+                  <img src="images/Rectangle 1.png" class="img1" alt="Rectangle 1">
+                  <img src="images/Rectangle 3.png" class="img3" alt="Rectangle 3">
+                </div>
+                
+                <div class="column">
+                  <img src="images/Rectangle 2.png" class="img2" alt="Rectangle 2">
+                  <img src="images/Rectangle 4.png" class="img4" alt="Rectangle 4">
+                </div>
             </div>
         </section>
     </main>
 
 </body>
-
 </html>
