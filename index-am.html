@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="scripts/script.js" type="module" defer></script>
+    <link rel="stylesheet" href="stylesheets/style-am.css">
+    <script src="scripts/script-am.js" type="module" defer></script>
     <title>Morpho</title>
 </head>
 <body>
@@ -14,12 +14,12 @@
             <div class="content">
                 <p class="location">
                     <img src="images/Frame 4.png" alt="frame">
-                    <span>YEREVAN</span>
+                    <span>ԵՐԵՎԱՆ</span>
                 </p>
 
-                <h1 class="heading">COURSES</h1>
-                <p class="description">Courses in programming and web development</p>
-                <a href="#" class="btn light" id="signUpBtn">SIGN UP FOR A CLASS</a>
+                <h1 class="heading">ԴԱՍԸՆԹԱՑՆԵՐ</h1>
+                <p class="description">Դասընթացներ ծրագրավորման և վեբ զարգացման</p>
+                <a href="#" class="btn light" id="signUpBtn">ԳՐԱՆՑՎԵԼ ԴԱՍԸՆԹԱՑԻՆ</a>
             </div>
 
             <div class="image">
@@ -27,11 +27,11 @@
             </div>
 
             <div class="selectLanguage">
-                <p class="currentLanguage">EN</p>
+                <p class="currentLanguage">ՀԱՅ</p>
 
                 <div class="dropdown">
-                    <a href="#" class="dropdown-item active">EN</a>
-                    <a href="index-am.html" class="dropdown-item">ՀԱՅ</a>
+                    <a href="index.html" class="dropdown-item">EN</a>
+                    <a href="#" class="dropdown-item active">ՀԱՅ</a>
                 </div>
             </div>
         </section>
@@ -42,34 +42,34 @@
 
             <form action="https://api.web3forms.com/submit" method="POST">
                 <h2>
-                    Sign up for a class
+                    ԳՐԱՆՑՎԵԼ ԴԱՍԸՆԹԱՑԻՆ
                     <span id="closeSignUpModal">&times;</span>
                 </h2>
 
                 <input type="hidden" name="access_key" value="ff5999d6-102b-4571-9e08-406ade290fa8">
 
                 <div class="inputBox">
-                    <p>Your first and last name</p>
-                    <input type="text" name="First and last name" required autocomplete="off">
+                    <p>Անուն ազգանուն</p>
+                    <input type="text" name="Անուն ազգանուն" required autocomplete="off">
                 </div>
                 
                 <div class="inputBox">
-                    <p>Your phone number</p>
-                    <input type="tel" name="Telephone" required autocomplete="off">
+                    <p>Հեռախոսի համարը</p>
+                    <input type="tel" name="Հեռախոսի համարը" required autocomplete="off">
                 </div>
 
                 <div class="inputBox">
-                    <p>Select the course</p>
-                    <select name="Selected course" required id="modalCoursesSelect">
-                        <option value="" disabled selected>Courses</option>
-                        <option value="Robotics">Robotics</option>
-                        <option value="Web programming">Web programming</option>
-                        <option value="C# .Net courses">C# .Net courses</option>
-                        <option value="C++ courses">C++ courses</option>
+                    <p>Ընտրել դասընթացը</p>
+                    <select name="Դասընթացը" required id="modalCoursesSelect">
+                        <option value="" disabled selected>Դասընթացներ</option>
+                        <option value="Ռոբոտաշինություն">Ռոբոտաշինություն</option>
+                        <option value="Վեբ ծրագրավորում">Վեբ ծրագրավորում</option>
+                        <option value="C# .Net դասընթացներ">C# .Net դասընթացներ</option>
+                        <option value="C++ դասընթացներ">C++ դասընթացներ</option>
                     </select>
                 </div>
 
-                <input type="submit" value="Sign up">
+                <input type="submit" value="ԳՐԱՆՑՎԵԼ ԴԱՍԸՆԹԱՑԻՆ">
             </form>
         </div>
 
@@ -84,22 +84,22 @@
                 </div>
 
                 <p class="modal_text" id="modalCoursesText"></p>
-                <a href="#" class="btn modalCoursesBtn">Sign up for a class</a>
+                <a href="#" class="btn modalCoursesBtn">ԳՐԱՆՑՎԵԼ ԴԱՍԸՆԹԱՑԻՆ</a>
             </div>
         </div>
 
         <section class="courses">
             <div class="courses-btns-container">
-                <a href="#" data-course="robotics" class="btn light">ROBOTICS</a>
-                <a href="#" data-course="web" class="btn dark">WEB PROGRAMMING</a>
-                <a href="#" data-course="csharp" class="btn dark">C# .NET COURSES</a>
-                <a href="#" data-course="cpp" class="btn light">C++ COURSES</a>
+                <a href="#" data-course="robotics" class="btn light">Ռոբոտաշինություն</a>
+                <a href="#" data-course="web" class="btn dark">Վեբ ծրագրավորում</a>
+                <a href="#" data-course="csharp" class="btn dark">C# .Net դասընթացներ</a>
+                <a href="#" data-course="cpp" class="btn light">C++ դասընթացներ</a>
             </div>
         </section>
 
         <section class="contacts">
             <div class="content">
-                <h2 class="heading">CONTACTS</h2>
+                <h2 class="heading">Հետադարձ կապ</h2>
 
                 <div class="info">
                     <a href="tel:+37495388868">
@@ -114,7 +114,7 @@
 
                     <a href='https://maps.app.goo.gl/YY5N1FnhKt36qqa98' target="_blank">
                         <img src="images/Frame 4.png" alt="Frame">
-                        Yerevan, Komitas 59
+                        Երևան, Կոմիտաս 59
                     </a>
                 </div>
 

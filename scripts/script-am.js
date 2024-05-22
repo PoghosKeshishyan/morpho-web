@@ -1,4 +1,4 @@
-import { db_en } from "../database/index.js";
+import { db_am } from "../database/index.js";
 
 
 /**
@@ -56,8 +56,8 @@ function closeSignUpModalFunc() {
 }
 
 function openModalCoursesFunc(course) {
-    if (db_en[course]) {
-        const courseDetails = db_en[course];
+    if (db_am[course]) {
+        const courseDetails = db_am[course];
 
         modalCourses.classList.add('active');
         modalCoursesTitle.innerText = courseDetails.title;
