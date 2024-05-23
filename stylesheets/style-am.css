@@ -367,11 +367,11 @@
 
 .contacts .content .heading {
     color: var(--white);
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .contacts .content .info {
-    margin: 48px 0;
+    margin: 58px 0;
 }
 
 .contacts .content .info a {
