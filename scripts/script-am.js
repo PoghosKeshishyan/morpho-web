@@ -1,4 +1,4 @@
-import { db_am } from "../database/index.js";
+import { db_am } from "../database/modalCourses.js";
 
 
 /**

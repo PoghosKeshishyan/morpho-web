@@ -1,4 +1,4 @@
-import { db_en } from "../database/index.js";
+import { db_en } from "../database/modalCourses.js";
 
 
 /**

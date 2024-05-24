@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style-am.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts/send-email-am.js" type="module" defer></script>
     <script src="scripts/script-am.js" type="module" defer></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <title>Morpho</title>
 </head>
 <body>
@@ -40,14 +43,14 @@
         <div class="modalSignUp" id="modalSignUp">
             <div class="bg"></div>
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form id="modalSignUpForm" action="https://api.web3forms.com/submit" method="POST">
                 <h2>
                     ԳՐԱՆՑՎԵԼ ԴԱՍԸՆԹԱՑԻՆ
                     <span id="closeSignUpModal">&times;</span>
                 </h2>
-
+            
                 <input type="hidden" name="access_key" value="ff5999d6-102b-4571-9e08-406ade290fa8">
-
+            
                 <div class="inputBox">
                     <p>Անուն ազգանուն</p>
                     <input type="text" name="Անուն ազգանուն" required autocomplete="off">
@@ -69,8 +72,12 @@
                     </select>
                 </div>
 
-                <input type="submit" value="ԳՐԱՆՑՎԵԼ ԴԱՍԸՆԹԱՑԻՆ">
-            </form>
+                <div id="resultModalSignUp" class="resultModalSignUp">
+                    <!-- resultModalSignUp data will be added dynamically using JavaScript -->
+                </div>
+            
+                <input type="submit" value="Sign up">
+            </form>                     
         </div>
 
         <!-- modal for courses button -->
